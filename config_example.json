@@ -19,6 +19,7 @@
     },
     "discord": {
         "appId": 923857760897101855,
-        "minimal": false
+        "minimal": false,
+        "repo_link": "https://github.com/EthanC/Perplex"
     }
 }

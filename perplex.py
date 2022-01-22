@@ -399,11 +399,16 @@ class Perplex:
         """Set the Rich Presence status for the provided Discord client."""
 
         title: str = data["primary"]
+        
+        if self.config['discord']['repo_link'] is not False:
+            data["buttons"].append(
+                {"label": "Get Perplex", "url": self.config['discord']['repo_link']}
+            )
 
-        data["buttons"].append(
-            {"label": "Get Perplex", "url": "https://github.com/EthanC/Perplex"}
-        )
-
+        if data["buttons"]:
+            buttons: List[dict] = data["buttons"]
+        else:
+            buttons = None
         try:
             client.update(
                 details=title,
@@ -413,7 +418,7 @@ class Perplex:
                 large_text=data["imageText"],
                 small_image="plex",
                 small_text="Plex",
-                buttons=data["buttons"],
+                buttons=buttons,
             )
         except Exception as e:
             logger.error(f"Failed to set Discord Rich Presence to {title}, {e}")

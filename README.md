@@ -30,3 +30,20 @@ python perplex.py
 ```
 
 Note: A Discord desktop client must be open on the same device that Perplex is running on.
+
+## Config Options
+
+  
+
+### Tautulli
+Use a Tautulli instance that is *exposed to the Internet* to obtain thumbnails for all media (notably album art).  
+**The provided URL will be visible to anyone using Inspect Element on Discord, so protect the instance accordingly.**
+
+ - `enable`: Whether or not to use Tautulli.
+ - `url`: The base URL of the installation.
+
+  ### Discord
+
+ - `button_label`: The label of the button to be displayed. Can be set to `false` to disable
+- `button_url`: The URL that the button leads to when pressed.
+

@@ -10,7 +10,7 @@
         "users": ["Ethan"]
     },
     "tmdb": {
-        "enable": true,
+        "enable": false,
         "apiKey": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
     },
     "tautulli": {
@@ -20,6 +20,7 @@
     "discord": {
         "appId": 923857760897101855,
         "minimal": false,
-        "repo_link": "https://github.com/EthanC/Perplex"
+        "button_label": "Get Perplex",
+        "button_url": "https://github.com/EthanC/Perplex"
     }
 }

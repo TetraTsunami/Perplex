@@ -403,9 +403,10 @@ class Perplex:
 
         title: str = data["primary"]
         
-        if self.config['discord']['repo_link'] is not False:
+        if self.config['discord']['button_url'] and self.config['discord']['button_label']:
             data["buttons"].append(
-                {"label": "Get Perplex", "url": self.config['discord']['repo_link']}
+                {"label": self.config['discord']['button_label'],
+                 "url": self.config['discord']['button_url']}
             )
 
         if data["buttons"]:
